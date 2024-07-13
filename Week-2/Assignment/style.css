@@ -267,16 +267,19 @@ main > h2 {
   gap: 15px;
   justify-content: center;
   align-items: center;
+
+  background-color: #fff;
+  width: 330px;
+  height: 400px;
 }
 
 .card > .image {
-  width: 150px;
-  height: 200px;
+  width: 225px;
+  height: 240px;
   margin-bottom: 0.8rem;
 
   text-align: center;
 }
-
 .card > .image > img {
   width: 100%;
   height: 100%;
@@ -284,7 +287,7 @@ main > h2 {
 }
 
 .card > .title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 550;
   text-align: center;
 }
@@ -331,12 +334,12 @@ main > h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  font-size: 0.9rem;
+  gap: 10px;
+  font-size: 1.1rem;
 }
 
 .card > .buttons1 > button {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 550;
   padding: 0.5rem 1.4rem;
   border: none;
@@ -346,7 +349,7 @@ main > h2 {
 }
 
 .card .buttons2 > button {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 550;
   padding: 0.5rem 0.7rem;
   border: none;
@@ -374,49 +377,6 @@ main > h2 {
   font-size: 0.9rem;
   background-color: #ffff;
   padding: 0.5rem;
-}
-
-/* Styling the card */
-.card > .image {
-  width: 225px;
-  height: 240px;
-  margin-bottom: 0.8rem;
-
-  text-align: center;
-}
-.card > .buttons1 > button {
-  font-size: 0.9rem;
-  font-weight: 550;
-}
-.card .buttons2 {
-  gap: 8px;
-  font-size: 1rem;
-}
-
-/* Styling the card */
-.card {
-  background-color: #fff;
-  width: 330px;
-  height: 400px;
-}
-
-.card > .title {
-  font-size: 1.1rem;
-  font-weight: 550;
-  text-align: center;
-}
-
-.card > .buttons1 > button {
-  font-size: 1rem;
-  font-weight: 550;
-}
-.card .buttons2 {
-  gap: 10px;
-  font-size: 1.1rem;
-}
-.card .buttons2 > button {
-  font-size: 1rem;
-  font-weight: 550;
 }
 
 /* Styling the sidebar */
@@ -480,7 +440,10 @@ main > h2 {
   color: #fff;
 }
 
-.navbar > ul > div > a,
+.navbar > ul > div > a {
+  margin-left: 1rem;
+  font-size: 1.11rem;
+}
 .itemLength {
   margin-left: 1rem;
   font-size: 1.4rem;
@@ -502,10 +465,6 @@ main > h2 {
 .menu-bar:hover,
 .cross-icon:hover {
   color: #2d9597;
-}
-
-.cross-icon:hover {
-  transform: rotate(360deg);
 }
 
 .cat-text {

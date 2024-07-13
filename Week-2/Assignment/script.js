@@ -15,6 +15,10 @@ const headerCarsl = document.getElementById("car-1");
 const contact_Part = document.getElementById("cu");
 
 // getting all the cart-section elements
+//initiate the cartproducts set
+let initialCartState = new Set();
+let totalPrice = 0;
+
 const cartMenu = document.querySelector(".cart-menu"),
   cartSection = document.querySelector("#Cart"),
   cartHeading = document.querySelector(".cartH"),
@@ -222,9 +226,6 @@ const electronicProducts = async () => {
   }
 };
 
-//initiate the cartproducts set
-let initialCartState = new Set();
-
 // function of add-to-cart , remove-from-cart customisably as per actionType
 const cartSlice = (actionType, payload, cardItem) => {
   // add-to-cart function
@@ -232,8 +233,10 @@ const cartSlice = (actionType, payload, cardItem) => {
     // add the requested product to cart if only the product doesn't already exist in cart
     if (![...initialCartState].includes(payload)) {
       initialCartState.add(payload);
+      totalPrice += payload.price;
       //update and show the number of items in cart
       cartItemLength.innerText = `(${initialCartState.size})`;
+      cartHeading.innerText = `Cart (${initialCartState.size} items , total $${totalPrice})`;
       //copy the passed div-element to add to the cartSection
       let cartCard = cardItem.cloneNode(true);
       //hide the addToCart button in cart and add onclick function to removeFromCart button
@@ -278,8 +281,15 @@ const cartSlice = (actionType, payload, cardItem) => {
   const removeFromCart = () => {
     // check if the item exists in the cart or not
     if ([...initialCartState].includes(payload)) {
-      // remove the product from cart
+      totalPrice -= payload.price;
       initialCartState.delete(payload);
+      //update and show the number of items in cart
+      cartItemLength.innerText = `(${initialCartState.size})`;
+      if (initialCartState.size == 0) {
+        totalPrice = 0;
+      }
+      cartHeading.innerText = `Cart (${initialCartState.size} items , total $${totalPrice})`;
+      // remove the product from cart
       //update and show the number of items in cart
       cartItemLength.innerText = `(${initialCartState.size})`;
       // select the cartCard to remove from cart
@@ -309,9 +319,9 @@ function populateCards(products, productsSection) {
     } class="itemImg" alt="${product.title}"></div>
    <p class="title">${product.title.slice(0, 30)}...</p>
    <p class="price">
-   <span class="Oldprice">₹${Math.round(
+   <span class="Oldprice">$${Math.round(
      product.price + product.price * 0.7
-   )}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="itemPrice">₹${
+   )}</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="itemPrice">$${
       product.price
     }</span></p>
    <div class="buttons1">
