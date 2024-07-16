@@ -7,4 +7,4 @@
 3.  All the tasks are stored in localStorage for different categories of tasks
 4.  Deleting a task means deleting that task from the localStorage arrays
 
-## Live link : https://a-minimal-todo-using-vanilla-js.netlify.app/
+5. Live link : https://a-minimal-todo-using-vanilla-js.netlify.app/
