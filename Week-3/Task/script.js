@@ -142,7 +142,7 @@ function deleteTodo(taskId, el, taskArr, taskArrKey, taskContainer) {
   window.location.reload();
 }
 
-function editTodo(taskId, el, taskArr, taskArrKey) {
+function editTodo(taskId, el, taskArr) {
   let taskDiv = document.getElementById(taskId);
   let taskDivContent = taskDiv.querySelector(".content");
   let taskProgress = taskDiv.querySelector(".progress");
@@ -157,13 +157,12 @@ function editTodo(taskId, el, taskArr, taskArrKey) {
   eTEditText.onchange = function (e) {
     taskDivContent.textContent = e.target.value;
     taskArr[index].content = e.target.value;
-    localStorage.setItem(taskArrKey, JSON.stringify(taskArr));
   };
 
   eTpriorityInp.onchange = function (e) {
     taskPriority.textContent = e.target.value;
     taskArr[index].priority = e.target.value;
-    localStorage.setItem(taskArrKey, JSON.stringify(taskArr));
+
     let prClasses = Array.from(taskPriority.classList);
     switch (taskPriority.textContent) {
       case "High":
@@ -187,7 +186,7 @@ function editTodo(taskId, el, taskArr, taskArrKey) {
   eTsts.onchange = function (e) {
     taskProgress.textContent = e.target.value;
     taskArr[index].progress = e.target.value;
-    localStorage.setItem(taskArrKey, JSON.stringify(taskArr));
+
     let stsClasses = Array.from(taskProgress.classList);
 
     switch (taskProgress.textContent) {
@@ -294,9 +293,10 @@ function populateTodos(tasks) {
 
       editBtn.addEventListener("click", () => {
         editTodoModal.classList.add("show");
-        editTodo(taskDiv.id, task, tasks, taskArrKey);
+        editTodo(taskDiv.id, task, tasks);
 
         editTodoBtn.onclick = function () {
+          localStorage.setItem(taskArrKey, JSON.stringify(tasks));
           editTodoModal.classList.remove("show");
         };
       });

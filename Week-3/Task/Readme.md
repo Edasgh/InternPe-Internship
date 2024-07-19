@@ -1,4 +1,4 @@
-# A simple todo app with vanilla js
+# A simple todo app with vanilla js (This web app is now fully responsive)
 
 ## App Overview:
 
@@ -7,4 +7,4 @@
 3.  All the tasks are stored in localStorage for different categories of tasks
 4.  Deleting a task means deleting that task from the localStorage arrays
 
-5. Live link : https://a-minimal-todo-using-vanilla-js.netlify.app/
+5.  Live link : https://a-minimal-todo-using-vanilla-js.netlify.app/
