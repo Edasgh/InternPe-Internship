@@ -110,13 +110,21 @@ form > button {
   flex-wrap: wrap;
 }
 
-.tasks-container > div {
-  width: 45%;
-  padding: 0.55rem;
+@media screen and (min-width: 300px) {
+  .tasks-container > div {
+    width: 98%;
+    padding: 0.55rem;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .tasks-container > div {
+    width: 45%;
+    padding: 0.55rem;
+  }
 }
 
 .tasks-container > div > h2 {
-  height: 3rem;
   border-bottom: 1.8px solid #5c5c5c;
 }
 
@@ -128,7 +136,7 @@ form > button {
 }
 .todo-item {
   position: relative;
-  padding: 0.5rem 1.1rem;
+  padding: 0.4rem 1rem;
   border: 0.5px solid black;
 
   display: flex;
@@ -147,7 +155,6 @@ form > button {
 .todo-item .content {
   font-size: 1.15rem;
   font-weight: 700;
-  line-height: 0.8rem;
 }
 
 .todo-item .pr {
@@ -195,6 +202,7 @@ form > button {
 }
 .todo-item .progress {
   font-size: 0.79rem;
+  margin: 0.8rem 0;
 }
 .todo-item .done {
   color: green;
