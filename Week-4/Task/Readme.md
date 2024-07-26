@@ -22,7 +22,7 @@ This project is a web-based implementation of the classic Connect 4 game using H
 4. The player have to connect four discs in a row (horizontally, vertically, or diagonally) to win.
 5. After a win, the page reloads and the game will reset automatically
 
-### How They Work Together
+#### Main Functionality
 
 - Player Moves:
   When a player makes a move, their piece is added to the corresponding column, and the index of that piece (respective to all the circles) is added to their respective array (redMoves or yMoves).
