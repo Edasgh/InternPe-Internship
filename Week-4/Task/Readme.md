@@ -2,6 +2,10 @@
 
 - Live link : https://conn-4-js.netlify.app/
 
+### Intro
+
+This project is a web-based implementation of the classic Connect 4 game using HTML, CSS, and JavaScript. Players take turns dropping colored discs from the top into a vertically suspended grid. The objective is to connect four of one's own discs in a row, either horizontally, vertically, or diagonally, before the opponent.
+
 ### Features
 
 - Two-player game (Red and Yellow)
@@ -15,8 +19,8 @@
 1. Open the game in your web browser.
 2. The game randomly selects the starting player (Red or Yellow).
 3. Players take turns clicking on the columns of the game board to drop their discs.
-4. The first player to connect four discs in a row (horizontally, vertically, or diagonally) wins.
-5. After a win, the game will automatically reset.
+4. The player have to connect four discs in a row (horizontally, vertically, or diagonally) to win.
+5. After a win, the page reloads and the game will reset automatically
 
 ### How They Work Together
 
