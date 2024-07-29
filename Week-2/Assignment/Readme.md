@@ -7,7 +7,6 @@ This project is a fully functional e-commerce website that showcases products, a
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [File Structure](#file-structure)
-- [Setup](#setup)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -39,21 +38,6 @@ root
 - **index.html**: Contains the structure of the webpage, including the navigation bar, product sections, and slideshow.
 - **style.css**: Styles the website, including the layout, fonts, colors, and responsiveness.
 - **script.js**: Handles the dynamic functionalities such as fetching product data, managing the cart, and controlling the slideshow.
-
-## Setup
-
-To set up the project locally, follow these steps:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/ecommerce-website.git
-   ```
-2. **Navigate to the project directory**:
-   ```bash
-   cd ecommerce-website
-   ```
-3. **Open `index.html` in your browser**:
-   You can open this file directly in your web browser to view the website.
 
 ## Usage
 
