@@ -11,6 +11,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 1rem;
+  overflow: hidden;
 }
 
 h1,
@@ -33,18 +35,20 @@ h1,
 }
 
 .board {
-  width: 550px;
+  width: 100%;
+  max-width: 610px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0.22rem;
+  gap: 0.5%;
   margin-top: 1.3rem;
 }
 
 .col {
   display: flex;
   flex-direction: column-reverse;
-  gap: 0.3rem;
-  padding: 0.3rem;
+  align-items: center;
+  gap: 0.5%;
+  padding: 0.44rem;
   background-color: blue;
   border-radius: 0.3rem;
 }
@@ -54,8 +58,11 @@ h1,
 }
 
 .cr {
-  width: 70px;
-  height: 70px;
+  width: 100%;
+  aspect-ratio: 1;
+  /*
+  aspect-ratio: 1;: This sets a 1:1 aspect ratio, meaning the width and height of the .cr element are always equal. This ensures that the circles remain perfect circles regardless of the screen size or container size.
+  */
   background-color: #fff;
   border: 2px solid black;
   border-radius: 50%;
@@ -78,4 +85,27 @@ h1,
 
 .d-n {
   display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .board {
+    width: 90%;
+  }
+
+  .red,
+  .yellow {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .board {
+    width: 100%;
+  }
+
+  .red,
+  .yellow {
+    font-size: 1rem;
+  }
 }

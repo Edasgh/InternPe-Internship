@@ -82,7 +82,7 @@ columns.forEach((col) => {
     if (redWins || yWins) {
       setTimeout(() => {
         window.location.reload();
-      }, 950);
+      }, 785);
     } else {
       turnNow = turnNow === "Red" ? "Yellow" : "Red";
       setText();

@@ -1,4 +1,4 @@
-## Connect-4 game with html-css-js:
+## Connect-4 game with html-css-js: (This app is now fully responsive)
 
 - Live link : https://conn-4-js.netlify.app/
 
