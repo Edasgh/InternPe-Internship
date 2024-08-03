@@ -2,7 +2,7 @@
 
 This is a simple calculator application built using HTML, CSS, and JavaScript.
 
-## Live Link : https://simple-calc-with-vanilla-js.netlify.app/
+## Live Link :https://simple-calculator-purejs.netlify.app/
 
 ## Features
 
